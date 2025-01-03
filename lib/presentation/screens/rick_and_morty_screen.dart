@@ -46,7 +46,7 @@ class _RickAndMortyScreenState extends State<RickAndMortyScreen> {
                   itemCount: rickAndMorty.results!.length,
                   itemBuilder: (context, index) {
                     final object = rickAndMorty.results![index];
-                    return Card( 
+                    return Card(
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -61,11 +61,12 @@ class _RickAndMortyScreenState extends State<RickAndMortyScreen> {
                           ),
                           SizedBox(width: 15),
                           Expanded(
-                            child: Column( spacing: 10,
+                            child: Column(
+                              spacing: 10,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                "${object.name}",
+                                  "${object.name}",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
@@ -76,8 +77,9 @@ class _RickAndMortyScreenState extends State<RickAndMortyScreen> {
                                     Text("${object.species}"),
                                   ],
                                 ),
-                               Text("Last Known Location: ${object.location?.name}"),
-                               Text("Fist Seen in: ${object.origin?.name}"),
+                                Text(
+                                    "Last Known Location: ${object.location?.name}"),
+                                Text("Fist Seen in: ${object.origin?.name}"),
                               ],
                             ),
                           ),
