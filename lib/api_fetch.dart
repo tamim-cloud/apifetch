@@ -1,4 +1,4 @@
-import 'package:apifetch/home_screen.dart';
+import 'package:apifetch/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class ApiFetch extends StatelessWidget {

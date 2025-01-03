@@ -1,5 +1,5 @@
-import 'package:apifetch/models/get_class.dart';
-import 'package:apifetch/services/api_service.dart';
+import 'package:apifetch/data/database/post_db.dart';
+import 'package:apifetch/data/models/get_class.dart';
 import 'package:flutter/material.dart';
 
 class DataScreen extends StatefulWidget {
@@ -10,7 +10,7 @@ class DataScreen extends StatefulWidget {
 }
 
 class _DataScreenState extends State<DataScreen> {
-  final ApiService apiService = ApiService();
+  PostDb datadb=PostDb();
   List<GetClass> result = [];
   bool isLoading = true;
 
@@ -21,7 +21,7 @@ class _DataScreenState extends State<DataScreen> {
   }
 
   void _loadpost() async {
-    result = await apiService.getFunction();
+    result = await datadb.rickAndMortyData();
     isLoading = false;
     setState(() {});
   }
